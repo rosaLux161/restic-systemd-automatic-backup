@@ -1,0 +1,9 @@
+# REST credentials.
+# Extracted settings so both systemd timers and user can just source this when want to work on my REST backup.
+# See https://restic.readthedocs.io/en/latest/030_preparing_a_new_repo.html
+REST_USER="<rest_user>"
+REST_PASS="<rest_pass>"
+REST_SERV="<rest_serv>"
+
+export RESTIC_REPOSITORY="rest:http://${REST_USER}:${REST_PASS}@${REST_SERV}:<port>"
+export RESTIC_PASSWORD_FILE="/etc/restic/rest_pw.txt"
